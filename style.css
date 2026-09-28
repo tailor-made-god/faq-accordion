@@ -1,0 +1,144 @@
+:root {
+  --c-white-color: hsl(0, 100%, 100%);
+  --c-purple-100: hsl(275, 100%, 97%);
+  --c-purple-600: hsl(292, 16%, 49%);
+  --c-purple-950: hsl(292, 42%, 14%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--c-purple-600);
+  background-color: var(--c-purple-100);
+  background-image: url(/assets/images/background-pattern-mobile.svg);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+}
+
+h1,
+h3 {
+  color: var(--c-purple-950);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card-container {
+  width: 90vw;
+  padding: 1.25rem;
+  background-color: var(--c-white-color);
+  border-radius: 8px;
+}
+
+.topic {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon-star {
+  width: 1.5rem;
+  height: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.qna:not(:first-child) {
+  border-block-start: 1px solid var(--c-purple-100);
+}
+
+.ques {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+.ans {
+  padding-block-end: 1rem;
+}
+.q-container > .qna:last-child > .ques,
+.q-container > .qna:last-child > .ans {
+  padding-block-end: 0;
+}
+
+.ques:hover {
+  cursor: pointer;
+  h3 {
+    color: #ad28eb;
+  }
+}
+
+@media (width > 31.25em) {
+  .card-container {
+    width: 70vw;
+  }
+}
+
+@media (width > 64em) {
+  body {
+    /* font-size: 1.125rem; */
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+  }
+  .card-container {
+    width: 34rem;
+    padding: 1.75rem;
+    border-radius: 12px;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .icon-star {
+    width: 1.75rem;
+  }
+
+  .q-container > .qna:last-child > .ques,
+  .q-container > .qna:last-child > .ans {
+    padding-block-end: 0;
+  }
+  /* .card-container {
+    width: 34rem;
+    padding: 2.25rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  .icon-star {
+    width: 2rem;
+  }
+
+  .qna:not(:first-child) {
+    border-block-start-width: 2px;
+  }
+  .ques {
+    padding-block: 1.5rem;
+  }
+  .ans {
+    padding-block-end: 1.5rem;
+  }
+  q-container > .ques:last-child,
+  q-container > .ques:last-child .ans {
+    padding-block-end: 0;
+  } */
+}
